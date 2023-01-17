@@ -1,0 +1,30 @@
+{
+  "name": "cli-lint",
+  "version": "1.0.0",
+  "description": "脚手架-lint",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "cd .. && husky install lint-cli/.husky",
+    "lint": "eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4",
+    "eslint": "^8.11.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.5",
+    "git-cz": "^4.8.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/git-cz"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.js": "eslint"
+  }
+}
